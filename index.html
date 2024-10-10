@@ -1,103 +1,203 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Join Jerry Fly Adventures for thrilling whitewater rafting experiences.">
-    <meta name="keywords" content="Rafting, Adventures, Outdoor, Jerry Fly">
-    <title>About Us - Jerry Fly Adventures</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your existing CSS styles here */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light background */
+            color: #333;
+        }
+
+        body.color1 {
+            background-color: #e0ffe0; /* Light green background */
+            color: #333; /* Dark text */
+        }
+
+        body.color2 {
+            background-color: #e0e0ff; /* Light blue background */
+            color: #333; /* Dark text */
+        }
+
+        header {
+            background-color: #ffffff; /* Light background for the navbar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .nav-left {
+            display: flex;
+        }
+
+        .nav-button {
+            background: none;
+            border: 1px solid transparent;
+            color: #333;
+            margin: 0 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #2575fc; /* Light blue background on hover */
+            color: white; /* White text on hover */
+            border: 1px solid #2575fc; /* Border color change on hover */
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .name {
+            margin-right: 20px;
+            font-size: 1.5rem; /* Increased size for better visibility */
+            font-weight: bold;
+            color: #333; /* Base color for the text */
+            text-shadow: 
+                1px 1px 0 rgba(255, 255, 255, 0.5), /* Light shadow for depth */
+                2px 2px 0 rgba(0, 0, 0, 0.2); /* Dark shadow for depth */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .name:hover {
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
+
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem; /* Set a base size for the icon */
+            transition: transform 0.3s, color 0.3s; /* Smooth transition for scaling and color */
+            padding: 0; /* Remove any default padding */
+            width: 40px; /* Set a specific width */
+            height: 40px; /* Set a specific height */
+            color: #333; /* Default color for the icon in light mode */
+        }
+
+        /* Change icon color in dark mode */
+        body.dark-mode .dark-mode-toggle {
+            color: #ffa500; /* Change to orange or any color for the icon in dark mode */
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
+        }
+
+        /* Dark Mode Navbar Styles */
+        body.dark-mode .navbar {
+            background-color: #1f1f1f; /* Dark navbar */
+        }
+
+        /* Adjust the button styles for dark mode */
+        body.dark-mode .nav-button {
+            color: #ffffff; /* Light text for buttons */
+            border-color: transparent; /* Remove border color */
+        }
+
+        body.dark-mode .nav-button:hover {
+            background-color: #ffa500; /* Change hover color in dark mode */
+        }
+
+        /* Adjust the button styles for color1 */
+        body.color1 .nav-button {
+            color: #333; /* Dark text for buttons */
+        }
+
+        body.color1 .nav-button:hover {
+            background-color: #4caf50; /* Darker green on hover */
+        }
+
+        /* Adjust the button styles for color2 */
+        body.color2 .nav-button {
+            color: #333; /* Dark text for buttons */
+        }
+
+        body.color2 .nav-button:hover {
+            background-color: #2196f3; /* Darker blue on hover */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="images/Rapidlogo.jpg" alt="Jerry Fly Adventures Logo" class="logo">
-            <nav role="navigation">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" aria-current="page">About Us</a></li>
-                    <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+        <div class="navbar">
+            <div class="nav-left">
+                <button class="nav-button">Home</button>
+                <button class="nav-button">About</button>
+                <button class="nav-button">Services</button>
+                <button class="nav-button">Portfolio</button>
+                <button class="nav-button">Contact</button>
+            </div>
+            <div class="nav-right">
+                <span class="name">Baluku Jerry</span>
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    🌙 <!-- Moon icon for dark mode -->
+                </button>
+            </div>
         </div>
     </header>
-    
+
     <main>
-        <div class="hero">
-            <img src="images/image.png" alt="Group of adventurers ready for rafting" class="hero-img">
-            <h1>Jerry Fly Adventures</h1>
-            <p>Your gateway to thrilling whitewater experiences!</p>
-
-            <section class="client-testimonials">
-                <h2>What Our Clients Say</h2>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        <p>"I had an unforgettable experience with Jerry Fly Adventures! The staff made us feel welcome and safe..."</p>
-                        <p><strong>— Emily Johnson</strong></p>
-                    </div>
-                    <img src="images/img.jpeg" alt="Happy client enjoying a rafting adventure" class="testimonial-img" style="float: right; border: none;">
-                </div>
-            </section>
-        </div>
-
-        <section class="history">
-            <h2>Our History</h2>
-            <div class="history-content">
-                <div class="history-text left">
-                    <p>Founded in 2010, Jerry Fly Adventures emerged from a fervent passion for outdoor exploration and the exhilarating thrill of whitewater rafting.</p>
-                </div>
-                <img src="images/img.jpeg" alt="History of Jerry Fly Adventures" class="history-img">
-                <div class="history-text right">
-                    <p>We navigate the rapids of untamed rivers, ensuring that every adventure is a symphony of splashes and laughter.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="adventure">
-            <h2>Adventure Awaits You!</h2>
-            <div class="rafting-images">
-                <figure>
-                    <img src="images/rafting1.png" alt="Rafting in Jinja">
-                    <figcaption>Jinja</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting2.png" alt="Rafting on the Rague River">
-                    <figcaption>Rague River</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting3.png" alt="Beautiful scenery during rafting">
-                    <figcaption>Beautiful Scenery</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting4.png" alt="Exciting water sports activity">
-                    <figcaption>Water Sports</figcaption>
-                </figure>
-            </div>
-        </section>
+        <h1>Welcome to My Portfolio</h1>
+        <!-- Add your content here -->
     </main>
 
-    <footer>
-        <p>&copy; 2024 Jerry Fly Adventures. All rights reserved.</p>
-        <nav class="sociallinks" role="navigation">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/facebook.png" alt="Facebook" width="30" height="30">
-            </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/tiktok.png" alt="TikTok" width="30" height="30">
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/twitter.png" alt="Twitter" width="30" height="30">
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/instagram.png" alt="Instagram" width="30" height="30">
-            </a>
-        </nav>
-    </footer>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        let currentMode = 0; // 0: light, 1: dark, 2: color1, 3: color2
 
+        // Check if dark mode is already enabled
+        if (localStorage.getItem('currentMode')) {
+            currentMode = parseInt(localStorage.getItem('currentMode'));
+            setMode(currentMode);
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            currentMode = (currentMode + 1) % 4; // Cycle through 0-3
+            setMode(currentMode);
+        });
+
+        function setMode(mode) {
+            document.body.classList.remove('dark-mode', 'color1', 'color2');
+            
+            switch (mode) {
+                case 0:
+                    darkModeToggle.innerHTML = '🌙'; // Moon icon for light mode
+                    break;
+                case 1:
+                    document.body.classList.add('dark-mode');
+                    darkModeToggle.innerHTML = '☀️'; // Sun icon for dark mode
+                    break;
+                case 2:
+                    document.body.classList.add('color1');
+                    darkModeToggle.innerHTML = '🟢'; // Green circle for color1
+                    break;
+                case 3:
+                    document.body.classList.add('color2');
+                    darkModeToggle.innerHTML = '🔵'; // Blue circle for color2
+                    break;
+            }
+
+            // Store the current mode
+            localStorage.setItem('currentMode', mode);
+        }
+    </script>
 </body>
 </html>

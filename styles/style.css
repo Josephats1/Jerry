@@ -1,125 +1,152 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background */
+    color: #333;
 }
 
-.header-content {
+body.color1 {
+    background-color: #e0ffe0; /* Light green background */
+    color: #333; /* Dark text */
+}
+
+body.color2 {
+    background-color: #e0e0ff; /* Light blue background */
+    color: #333; /* Dark text */
+}
+
+header {
+    background-color: #ffffff; /* Light background for the navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #f8f9fa;
+    padding: 10px 15px; /* Reduced padding for compactness */
 }
 
-.logo {
-    height: 60px;
-}
-
-.nav-links {
-    list-style: none;
+.nav-left {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap if they don't fit */
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #000;
+.nav-button {
+    background: none;
+    border: 1px solid transparent;
+    color: #333;
+    margin: 0 10px; /* Reduced margin for compactness */
+    padding: 8px 12px; /* Adjusted padding for compact buttons */
+    cursor: pointer;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    border-radius: 20px; /* Rounded buttons */
+    transition: all 0.3s ease;
 }
 
-.hero {
-    position: relative;
-    text-align: center;
-    color: white;
+.nav-button:hover {
+    background-color: #2575fc; /* Light blue background on hover */
+    color: white; /* White text on hover */
+    border: 1px solid #2575fc; /* Border color change on hover */
 }
 
-.hero-img {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-}
-
-.hero p {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;
-}
-
-.client-testimonials {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.testimonial-card {
+.nav-right {
     display: flex;
     align-items: center;
 }
 
-.testimonial-text {
-    flex: 1;
-    margin-left: 1rem;
+.name {
+    margin-right: 15px;
+    font-size: 1.5rem; /* Increased size for better visibility */
+    font-weight: bold;
+    color: #333; /* Base color for the text */
+    text-shadow: 
+        1px 1px 0 rgba(255, 255, 255, 0.5), /* Light shadow for depth */
+        2px 2px 0 rgba(0, 0, 0, 0.2); /* Dark shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.testimonial-img {
-    width: 100px; /* Adjust size as necessary */
-    height: auto;
-    border-radius: 60%;
+.name:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
-.history {
-    margin: 2rem 0;
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem; /* Set a base size for the icon */
+    transition: transform 0.3s, color 0.3s; /* Smooth transition for scaling and color */
+    padding: 0; /* Remove any default padding */
+    width: 40px; /* Set a specific width */
+    height: 40px; /* Set a specific height */
+    color: #333; /* Default color for the icon in light mode */
 }
 
-.history-content {
-    display: flex;
-    align-items: center;
+/* Change icon color in dark mode */
+body.dark-mode .dark-mode-toggle {
+    color: #ffa500; /* Change to orange or any color for the icon in dark mode */
 }
 
-.history-text {
-    flex: 1;
-    padding: 1rem;
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
 }
 
-.history-img {
-    width: 40%; /* Adjusted size */
-    height: auto;
+/* Dark Mode Navbar Styles */
+body.dark-mode .navbar {
+    background-color: #1f1f1f; /* Dark navbar */
 }
 
-.adventure {
-    margin: 2rem 0;
+/* Adjust the button styles for dark mode */
+body.dark-mode .nav-button {
+    color: #ffffff; /* Light text for buttons */
+    border-color: transparent; /* Remove border color */
 }
 
-.rafting-images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Allows scrolling if needed */
+body.dark-mode .nav-button:hover {
+    background-color: #ffa500; /* Change hover color in dark mode */
 }
 
-.rafting-images figure {
-    margin: 1rem;
-    text-align: center;
-    flex: 0 0 auto; /* Prevent shrinking */
+/* Adjust the button styles for color1 */
+body.color1 .nav-button {
+    color: #333; /* Dark text for buttons */
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f8f9fa;
+body.color1 .nav-button:hover {
+    background-color: #4caf50; /* Darker green on hover */
+}
+
+/* Adjust the button styles for color2 */
+body.color2 .nav-button {
+    color: #333; /* Dark text for buttons */
+}
+
+body.color2 .nav-button:hover {
+    background-color: #2196f3; /* Darker blue on hover */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .nav-left {
+        margin-bottom: 10px; /* Space between nav buttons and name */
+    }
+
+    .nav-button {
+        margin: 5px 0; /* Reduced margin for buttons */
+        font-size: 0.8rem; /* Smaller font size for buttons */
+        padding: 5px 10px; /* Adjusted padding for compactness */
+    }
+
+    .name {
+        font-size: 1.3rem; /* Slightly smaller font size for smaller screens */
+    }
+
+    .dark-mode-toggle {
+        font-size: 1.5rem; /* Smaller size for the icon */
+    }
 }
