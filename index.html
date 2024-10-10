@@ -6,12 +6,13 @@
     <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Add your existing CSS styles here */
-
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0; /* Light background */
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         body.color1 {
@@ -24,31 +25,34 @@
             color: #333; /* Dark text */
         }
 
+        /* Header Styles */
         header {
             background-color: #ffffff; /* Light background for the navbar */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            padding: 15px 30px;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
         }
 
         .nav-left {
             display: flex;
+            flex-wrap: wrap; /* Allow items to wrap if they don't fit */
         }
 
         .nav-button {
             background: none;
             border: 1px solid transparent;
             color: #333;
-            margin: 0 15px;
+            margin: 0 10px; /* Adjust margin for compactness */
             padding: 10px 15px;
             cursor: pointer;
-            font-size: 1rem;
-            border-radius: 25px;
+            font-size: 0.9rem; /* Smaller font size for buttons */
+            border-radius: 25px; /* Rounded buttons */
             transition: all 0.3s ease;
         }
 
@@ -64,7 +68,7 @@
         }
 
         .name {
-            margin-right: 20px;
+            margin-right: 15px;
             font-size: 1.5rem; /* Increased size for better visibility */
             font-weight: bold;
             color: #333; /* Base color for the text */
@@ -82,11 +86,11 @@
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 2rem; /* Set a base size for the icon */
+            font-size: 1.5rem; /* Smaller size for the icon */
             transition: transform 0.3s, color 0.3s; /* Smooth transition for scaling and color */
             padding: 0; /* Remove any default padding */
-            width: 40px; /* Set a specific width */
-            height: 40px; /* Set a specific height */
+            width: 30px; /* Set a specific width */
+            height: 30px; /* Set a specific height */
             color: #333; /* Default color for the icon in light mode */
         }
 
@@ -132,6 +136,31 @@
 
         body.color2 .nav-button:hover {
             background-color: #2196f3; /* Darker blue on hover */
+        }
+
+        /* Media Queries for Smaller Screens */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+
+            .nav-button {
+                margin: 5px 0; /* Reduced margin for buttons */
+                font-size: 0.8rem; /* Smaller font size for buttons */
+                padding: 5px 10px; /* Adjusted padding for compactness */
+                border-radius: 15px; /* More rounded buttons on smaller screens */
+            }
+
+            .name {
+                font-size: 1.3rem; /* Slightly smaller font size for smaller screens */
+            }
+
+            .dark-mode-toggle {
+                font-size: 1.3rem; /* Smaller size for the icon */
+                width: 28px; /* Adjust width for smaller screens */
+                height: 28px; /* Adjust height for smaller screens */
+            }
         }
     </style>
 </head>
