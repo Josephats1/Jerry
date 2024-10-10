@@ -1,0 +1,125 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+.hero p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+}
+
+.client-testimonials {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.testimonial-card {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-text {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.testimonial-img {
+    width: 100px; /* Adjust size as necessary */
+    height: auto;
+    border-radius: 60%;
+}
+
+.history {
+    margin: 2rem 0;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+}
+
+.history-text {
+    flex: 1;
+    padding: 1rem;
+}
+
+.history-img {
+    width: 40%; /* Adjusted size */
+    height: auto;
+}
+
+.adventure {
+    margin: 2rem 0;
+}
+
+.rafting-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allows scrolling if needed */
+}
+
+.rafting-images figure {
+    margin: 1rem;
+    text-align: center;
+    flex: 0 0 auto; /* Prevent shrinking */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
