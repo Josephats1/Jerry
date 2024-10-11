@@ -272,15 +272,75 @@
             }
         }
 
-        @media (min-width: 601px) {
-            .card {
-                flex-direction: row; /* Keep items in a row on larger screens */
-            }
+        .card {
+    display: flex;
+    align-items: center; /* Center items vertically for larger screens */
+    margin: 20px; /* Margin for spacing */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+    position: relative; /* Position relative for the pseudo-element */
+}
 
-            .text-content {
-                width: 100%; /* Adjust width to fit the layout */
-            }
-        }
+/* Profile image styling */
+.profile-img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 15px; /* Rounded corners */
+    margin-left:800px; /* Space between image and text */
+    object-fit: cover; /* Ensure the image covers the area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .card {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin: 20px; /* Margin for spacing */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 15px; /* Rounded corners */
+   
+    object-fit: cover; /* Ensure the image covers the area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .profile-img {
+        margin: 0 0 15px 0; /* Margin below the image */
+    }
+
+    .text-content {
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+
+@media (min-width: 601px) {
+    .card {
+        flex-direction: row; /* Keep items in a row on larger screens */
+    }
+
+    .text-content {
+        width: 100%; /* Adjust width to fit the layout */
+    }
+
+    .profile-img {
+        margin-left: 15px; /* Space between text and image */
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -304,6 +364,7 @@
 
     <main>
         <div class="card">
+            
             <div class="text-content">
                 <h1>Welcome Dear</h1>
                 <h2>I am <span class="neon" style="margin-left: 10px;">Baluku Jerry</span></h2>
@@ -318,6 +379,7 @@
                     
                     </h4>
             </div>
+            <img src="images/image.png" alt="Profile Picture" class="profile-img">
         </div>
     </main>
     
