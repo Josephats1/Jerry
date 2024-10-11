@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styles */
@@ -68,16 +68,19 @@
         }
 
         .name {
-            margin-right: 15px;
-            font-size: 1.5rem; /* Increased size for better visibility */
-            font-weight: bold;
-            color: #333; /* Base color for the text */
-            transition: transform 0.3s ease; /* Smooth transition for hover effect */
-        }
+    margin-right: 15px;
+    font-size: 1.5rem; /* Increased size for better visibility */
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff00cc, #3333ff, #66ccff, #ffcc00); /* Galaxy-like colors */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    color: transparent; /* Makes the text color transparent to reveal the background */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
 
-        .name:hover {
-            transform: translateY(-2px); /* Slight lift effect on hover */
-        }
+.name:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
 
         .dark-mode-toggle {
             background: none;
@@ -224,7 +227,7 @@
                 <button class="nav-button">Contact</button>
             </div>
             <div class="nav-right">
-                <span class="name">Baluku Jerry</span>
+                <span class="name" style="font-family:bernard mt condensed, color:galaxy, font: size 12px;">Baluku Jerry</span>
                 <button class="dark-mode-toggle" id="darkModeToggle">
                     🌙 <!-- Moon icon for dark mode -->
                 </button>
