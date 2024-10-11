@@ -30,6 +30,8 @@
             background-color: #ffffff; /* Light background for the navbar */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             padding: 15px 30px;
+            border-radius: 15px; /* Rounds the corners of the entire navbar */
+            margin: 10px; /* Adds some spacing around the navbar */
         }
 
         .navbar {
@@ -37,6 +39,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap; /* Allow wrapping on small screens */
+            border-radius: 15px; /* Rounds the corners of the navbar */
         }
 
         .nav-left {
@@ -68,19 +71,18 @@
         }
 
         .name {
-    margin-right: 15px;
-    font-size: 1.5rem; /* Increased size for better visibility */
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff00cc, #3333ff, #66ccff, #ffcc00); /* Galaxy-like colors */
-    -webkit-background-clip: text; /* Clips the background to the text */
-    color: transparent; /* Makes the text color transparent to reveal the background */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
+            margin-right: 15px;
+            font-size: 1.5rem; /* Increased size for better visibility */
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff00cc, #3333ff, #66ccff, #ffcc00); /* Galaxy-like colors */
+            -webkit-background-clip: text; /* Clips the background to the text */
+            color: transparent; /* Makes the text color transparent to reveal the background */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
 
-.name:hover {
-    transform: translateY(-2px); /* Slight lift effect on hover */
-}
-
+        .name:hover {
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
 
         .dark-mode-toggle {
             background: none;
@@ -227,7 +229,7 @@
                 <button class="nav-button">Contact</button>
             </div>
             <div class="nav-right">
-                <span class="name" style="font-family:bernard mt condensed, color:galaxy, font: size 12px;">Baluku Jerry</span>
+                <span class="name">Baluku Jerry</span>
                 <button class="dark-mode-toggle" id="darkModeToggle">
                     🌙 <!-- Moon icon for dark mode -->
                 </button>
@@ -259,59 +261,32 @@
         });
 
         function setMode(mode) {
-            // Reset body class
-            document.body.classList.remove('dark-mode', 'color1', 'color2');
-
-            // Set the appropriate mode class
-            switch (mode) {
-                case 0: // Light mode
-                    break;
-                case 1: // Dark mode
-                    document.body.classList.add('dark-mode');
-                    break;
-                case 2: // Color1
-                    document.body.classList.add('color1');
-                    break;
-                case 3: // Color2
-                    document.body.classList.add('color2');
-                    break;
+            const body = document.body;
+            body.classList.remove('dark-mode', 'color1', 'color2');
+            if (mode === 1) {
+                body.classList.add('dark-mode');
+            } else if (mode === 2) {
+                body.classList.add('color1');
+            } else if (mode === 3) {
+                body.classList.add('color2');
             }
-
-            localStorage.setItem('currentMode', mode); // Save mode to local storage
+            localStorage.setItem('currentMode', mode);
         }
 
-        // Typing effect for h3
-        const typingElement = document.getElementById('typing');
-        const words = ["Developer", "Designer", "Creator", "Innovator"];
-        let wordIndex = 0;
-        let letterIndex = 0;
-        let typingSpeed = 200; // Speed of typing (in ms)
-        let deletingSpeed = 100; // Speed of deleting (in ms)
-        let pauseBetweenWords = 1500; // Pause before starting to delete
+        // Typing Effect
+        const typingText = "Creative Developer";
+        let index = 0;
+        const typingElement = document.getElementById("typing");
 
-        function typeWords() {
-            if (letterIndex < words[wordIndex].length) {
-                typingElement.textContent += words[wordIndex].charAt(letterIndex);
-                letterIndex++;
-                setTimeout(typeWords, typingSpeed);
-            } else {
-                setTimeout(deleteWords, pauseBetweenWords);
+        function typeEffect() {
+            if (index < typingText.length) {
+                typingElement.textContent += typingText.charAt(index);
+                index++;
+                setTimeout(typeEffect, 150); // Speed of typing effect
             }
         }
 
-        function deleteWords() {
-            if (letterIndex > 0) {
-                typingElement.textContent = words[wordIndex].substring(0, letterIndex - 1);
-                letterIndex--;
-                setTimeout(deleteWords, deletingSpeed);
-            } else {
-                wordIndex = (wordIndex + 1) % words.length; // Move to the next word
-                setTimeout(typeWords, typingSpeed);
-            }
-        }
-
-        // Start the typing effect
-        typeWords();
+        typeEffect(); // Start typing effect
     </script>
 </body>
 </html>
