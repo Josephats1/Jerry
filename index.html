@@ -13,6 +13,7 @@
             color: #333;
             margin: 0;
             padding: 0;
+
         }
 
         body.color1 {
@@ -215,9 +216,67 @@
         }
 
         /* Add margin to headers */
-        h1, h2, h3, h4 {
+        h1, h2, h3, h4 ,h5{
             margin-left: 30px;
+            flex: 1 ;
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: small;
         }
+        /* Main content styling */
+.content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    margin: 20px; /* Margin for spacing */
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff; /* Card background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Card shadow */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    margin: 20px; /* Margin for spacing */
+    display: flex; /* Flex layout for the card */
+    align-items: center; /* Align items vertically */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+/* Neon glow effect */
+.card::before {
+    content: '';
+    position: absolute; /* Position absolute to create an outer glow */
+    top: -10px; /* Adjust as needed */
+    left: -10px; /* Adjust as needed */
+    right: -10px; /* Adjust as needed */
+    bottom: -10px; /* Adjust as needed */
+    border-radius: 15px; /* Match the card's border radius */
+    background: rgba(0, 255, 255, 0.3); /* Neon background color */
+    filter: blur(15px); /* Blur for glow effect */
+    z-index: -1; /* Place behind the card */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    /* Optional: Change the glow color on hover */
+    /* You can uncomment the line below if you want to change the glow color on hover */
+    /* background: rgba(0, 255, 255, 0.5); */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .animated-img {
+        margin: 0; /* Remove margin for the image */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -240,12 +299,18 @@
     </header>
 
     <main>
-        <h1>Welcome Dear</h1>
-        <h2>I am <span class="neon">Baluku Jerry</span></h2> 
-        <h3>And a <span id="typing"></span></h3> <!-- Placeholder for typing effect -->
-        <h4>Welcome Dear</h4>
+        <div class="card">
+            <div class="text-content">
+                <h1>Welcome Dear</h1>
+                <h2>I am <span class="neon">Baluku Jerry</span></h2>
+                <h3>And a <span id="typing"></span></h3> <!-- Placeholder for typing effect -->
+                <h4>Welcome Dear</h4>
+            </div>
+            <img src="path/to/your/animated-image.gif" alt="Animated Image" class="animated-img">
+        </div>
     </main>
-
+    
+    
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         let currentMode = 0; // 0: light, 1: dark, 2: color1, 3: color2
@@ -319,4 +384,3 @@
     </script>
 </body>
 </html>
-
