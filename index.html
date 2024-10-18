@@ -280,66 +280,6 @@
     position: relative; /* Position relative for the pseudo-element */
 }
 
-/* Profile image styling */
-.profile-img {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border-radius: 15px; /* Rounded corners */
-    margin-left:800px; /* Space between image and text */
-    object-fit: cover; /* Ensure the image covers the area */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 600px) {
-    .card {
-    display: flex;
-    align-items: center; /* Center items vertically */
-    margin: 20px; /* Margin for spacing */
-    transition: transform 0.3s ease; /* Smooth scale effect */
-    position: relative; /* Position relative for the pseudo-element */
-}
-
-/* Profile image styling */
-.profile-img {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border-radius: 15px; /* Rounded corners */
-   
-    object-fit: cover; /* Ensure the image covers the area */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 600px) {
-    .card {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center items */
-    }
-
-    .profile-img {
-        margin: 0 0 15px 0; /* Margin below the image */
-    }
-
-    .text-content {
-        text-align: center; /* Center text on smaller screens */
-    }
-}
-
-@media (min-width: 601px) {
-    .card {
-        flex-direction: row; /* Keep items in a row on larger screens */
-    }
-
-    .text-content {
-        width: 100%; /* Adjust width to fit the layout */
-    }
-
-    .profile-img {
-        margin-left: 15px; /* Space between text and image */
-    }
-}
-
 
     </style>
 </head>
@@ -379,8 +319,87 @@
                     
                     </h4>
             </div>
-            <img src="images/image.png" alt="Profile Picture" class="profile-img">
+           ---image 
         </div>
+       
+  
+        <section id="services" style="margin: 20px;">
+            <h2>My Services</h2>
+            <div class="services-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                <div class="service-card" style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 20px; margin: 10px; flex-basis: 30%;">
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and user-friendly websites using modern technologies.</p>
+                </div>
+                <div class="service-card" style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 20px; margin: 10px; flex-basis: 30%;">
+                    <h3>App Development</h3>
+                    <p>Developing mobile applications for both iOS and Android platforms.</p>
+                </div>
+                <div class="service-card" style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 20px; margin: 10px; flex-basis: 30%;">
+                    <h3>Consulting</h3>
+                    <p>Providing expert advice to optimize your projects and achieve your goals.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" style="margin: 20px;">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate software developer with a strong focus on creating innovative solutions 
+                and enhancing user experiences. My journey in technology began at a young age, and since then, 
+                I have honed my skills in various programming languages, frameworks, and tools.
+            </p>
+            <p>
+                With experience in both front-end and back-end development, I thrive in collaborative 
+                environments where I can contribute to exciting projects and learn from others. 
+                My goal is to leverage technology to solve real-world problems and make a positive impact.
+            </p>
+            <p>
+                Outside of coding, I enjoy exploring new technologies, participating in hackathons, 
+                and sharing my knowledge through mentoring and community involvement.
+            </p>
+        </section>
+        <section id="portfolio" style="margin: 20px;">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                <div class="portfolio-item" style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 20px; margin: 10px; flex-basis: 30%;">
+                    <h3>Project Title 1</h3>
+                    <p>Description of the project, what technologies were used, and the problem it solves.</p>
+                    <a href="https://link-to-your-project.com" target="_blank" class="nav-button" style="background-color: #2575fc; color: white; text-align: center; display: inline-block; padding: 10px; border-radius: 5px;">View Project</a>
+                </div>
+                <div class="portfolio-item" style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 20px; margin: 10px; flex-basis: 30%;">
+                    <h3>Project Title 2</h3>
+                    <p>Description of the project, what technologies were used, and the problem it solves.</p>
+                    <a href="https://link-to-your-project.com" target="_blank" class="nav-button" style="background-color: #2575fc; color: white; text-align: center; display: inline-block; padding: 10px; border-radius: 5px;">View Project</a>
+                </div>
+                <div class="portfolio-item" style="background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 20px; margin: 10px; flex-basis: 30%;">
+                    <h3>Project Title 3</h3>
+                    <p>Description of the project, what technologies were used, and the problem it solves.</p>
+                    <a href="https://link-to-your-project.com" target="_blank" class="nav-button" style="background-color: #2575fc; color: white; text-align: center; display: inline-block; padding: 10px; border-radius: 5px;">View Project</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Get in Touch</h3>
+                        <p>If you have any questions or just want to connect, feel free to reach out!</p>
+                        <button class="contact-button">Contact Me</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Contact Details</h3>
+                        <p>Email: balukujerry@example.com</p>
+                        <p>Phone: +123 456 7890</p>
+                        <p>LinkedIn: linkedin.com/in/balukujerry</p>
+                        <button class="contact-button">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
     </main>
     
     <script>
